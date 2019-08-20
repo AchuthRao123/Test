@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel = "tests" thread-count="2">
+  <test  name="Test">
+  	<parameter name="BrowserName" value="chrome"/>
+    <classes>
+    	<class name="GW.InvokeApplication"/>
+     	 <class name="GW.Login"/>     
+      	<class name="GW.CreateAccount"/>
+      	<class name="GW.NewSubmission"/>
+    </classes>
+  </test> <!-- Test -->
+ 
+</suite> <!-- Suite -->

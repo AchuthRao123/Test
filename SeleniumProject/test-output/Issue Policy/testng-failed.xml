@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Issue Policy]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="GW.Offerings">
+        <methods>
+          <include name="offerings"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- GW.Offerings -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Issue Policy] -->
