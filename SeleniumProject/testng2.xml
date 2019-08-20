@@ -21,4 +21,14 @@
     </classes>
   </test> <!-- Test -->
   
+   <test  name="Test3">
+    <parameter name="BrowserName" value="ie"/>
+    <classes>
+    	<class name="GW.InvokeApplication"/>
+     	 <class name="GW.Login"/>     
+      	<class name="GW.CreateAccount"/>
+      	<class name="GW.NewSubmission"/>
+    </classes>
+  </test> <!-- Test -->
+  
 </suite> <!-- Suite -->
