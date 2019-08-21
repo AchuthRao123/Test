@@ -1,56 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <test thread-count="2" name="Test1(failed)" parallel="tests">
-    <parameter name="BrowserName" value="ie"/>
-    <classes>
-      <class name="GW.NewSubmission">
-        <methods>
-          <include name="newSubmission"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- GW.NewSubmission -->
-      <class name="GW.CreateAccount">
-        <methods>
-          <include name="newAccount"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- GW.CreateAccount -->
-      <class name="GW.Login">
-        <methods>
-          <include name="initialize"/>
-          <include name="Login_App"/>
-        </methods>
-      </class> <!-- GW.Login -->
-      <class name="GW.InvokeApplication">
-        <methods>
-          <include name="InvokeApp"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- GW.InvokeApplication -->
-    </classes>
-  </test> <!-- Test1(failed) -->
-  <test thread-count="2" name="Test(failed)" parallel="tests">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="1" name="Test(failed)">
     <parameter name="BrowserName" value="chrome"/>
     <classes>
-      <class name="GW.NewSubmission">
+      <class name="TestHakathon.Youtube">
         <methods>
-          <include name="newSubmission"/>
-          <include name="initialize"/>
+          <include name="initialize" invocation-numbers="0"/>
         </methods>
-      </class> <!-- GW.NewSubmission -->
-      <class name="GW.CreateAccount">
-        <methods>
-          <include name="newAccount"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- GW.CreateAccount -->
-      <class name="GW.Login">
-        <methods>
-          <include name="initialize"/>
-          <include name="Login_App"/>
-        </methods>
-      </class> <!-- GW.Login -->
+      </class> <!-- TestHakathon.Youtube -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
