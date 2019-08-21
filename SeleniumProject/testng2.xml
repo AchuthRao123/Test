@@ -11,7 +11,7 @@
     </classes>
   </test> <!-- Test -->
   
-    <test  name="Test1">
+    <test  name="Test2">
     <parameter name="BrowserName" value="firefox"/>
     <classes>
     	<class name="GW.InvokeApplication"/>

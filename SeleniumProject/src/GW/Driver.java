@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
@@ -29,24 +30,30 @@ public class Driver {
 	
 	public WebDriver initialize(String BrowserName) {
 	 
-	  if(BrowserName.equalsIgnoreCase("firefox")) {
-	 
-		System.setProperty("webdriver.gecko.driver", "C:\\Magic\\Selenium\\geckodriver-v0.20.0-win64\\geckodriver.exe");
-		
-	    driver = new FirefoxDriver();
-	  
-	 
-	  }else if (BrowserName.equalsIgnoreCase("chrome")) { 
-	 
-	 
+	  if(BrowserName.equalsIgnoreCase("chrome")) {
+	     
 		  System.setProperty("webdriver.chrome.driver", "C:\\Magic\\Selenium\\chromedriver_win32\\chromedriver.exe");
-	 
+			 
 		  ChromeOptions options = new ChromeOptions();
 		  options.setExperimentalOption("useAutomationExtension", false);
 		  //options.addArguments("headless");
 		  options.addArguments("window-size=1200x600");
 		  driver = new ChromeDriver(options); 
+	  
 	 
+	  }else if (BrowserName.equalsIgnoreCase("firefox")) { 
+	 
+	 
+			System.setProperty("webdriver.gecko.driver", "C:\\Magic\\Selenium\\geckodriver-v0.20.0-win64\\geckodriver.exe");
+			
+		    driver = new FirefoxDriver();
+	 
+	  } else if (BrowserName.equalsIgnoreCase("ie")) { 
+	 
+	 
+		  System.setProperty("webdriver.chrome.driver", "C:\\Magic\\Selenium\\MicrosoftWebDriver.exe");
+	 
+		  driver = new InternetExplorerDriver();
 	  } 
 	  
 	  return driver;
